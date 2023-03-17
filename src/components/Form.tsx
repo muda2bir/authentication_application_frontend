@@ -18,6 +18,7 @@ export default function Form({ submitBtnText, formik }: FormProps) {
       `${import.meta.env.VITE_SERVER_URL}/api/v1/authenticate/login/google`,
       "_self"
     );
+    navigate("/");
   };
 
   return (
