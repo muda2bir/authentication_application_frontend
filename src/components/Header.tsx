@@ -97,7 +97,9 @@ export default function Header({ username, userPhoto }: HeaderProps) {
             onClick={async () => {
               let response = await axios({
                 method: "post",
-                url: "http://localhost:3001/api/v1/authenticate/logout",
+                url: `${
+                  import.meta.env.VITE_SERVER_URL
+                }/api/v1/authenticate/logout`,
                 withCredentials: true,
               });
               if (response.data.status === "ok") {
