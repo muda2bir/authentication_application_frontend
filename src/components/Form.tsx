@@ -15,7 +15,7 @@ export default function Form({ submitBtnText, formik }: FormProps) {
   const navigate = useNavigate();
   const redirectToGoogleSSO = () => {
     window.open(
-      "http://localhost:3001/api/v1/authenticate/login/google",
+      `${import.meta.env.VITE_SERVER_URL}/api/v1/authenticate/login/google`,
       "_self"
     );
   };
