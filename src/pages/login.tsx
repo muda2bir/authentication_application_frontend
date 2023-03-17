@@ -21,6 +21,9 @@ export default function Login() {
           method: "post",
           url: `${import.meta.env.VITE_SERVER_URL}/api/v1/authenticate/login`,
           data: values,
+          headers: {
+            "Content-Type": "application/json",
+          },
           withCredentials: true,
         });
         if (response.data.status === "ok") {

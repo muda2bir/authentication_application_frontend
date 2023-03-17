@@ -27,6 +27,9 @@ export default function Register() {
             import.meta.env.VITE_SERVER_URL
           }/api/v1/authenticate/register`,
           withCredentials: true,
+          headers: {
+            "Content-Type": "application/json",
+          },
           data: values,
         });
         if (response.data.status === "ok") {
